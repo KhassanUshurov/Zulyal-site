@@ -228,7 +228,62 @@ function Home() {
           <div className="faq-grid"><h2>Всё важное —<br /><i>до начала</i></h2><div className="faq-list">{faq.map(([question, answer], index) => <details className="faq-item" key={`${question}-${index}`}><summary><span>{question}</span><Plus size={20} /></summary><p>{answer}</p></details>)}</div></div>
         </section>
 
-        <section className="contact" id="contact"><div className="contact-inner"><div className="section-kicker light"><span>06</span><span>Контакты</span></div><div className="contact-route"><span>А</span><b /><b /><b /><span>Б</span></div><h2>Начните с того,<br /><i>где вы сейчас</i></h2><p>Запишитесь на консультацию — онлайн по всему миру или очно в городе Астана.</p><a className="contact-action" href={whatsappLink("консультация")}>Запись на консультацию <ArrowUpRight size={18} /></a><div className="contact-orbit orbit-one" /><div className="contact-orbit orbit-two" /></div></section>
+<section className="contact" id="contact">
+  <div className="contact-inner">
+    <div className="section-kicker light">
+      <span>06</span>
+      <span>Контакты</span>
+    </div>
+    <div className="contact-route">
+      <span>А</span>
+      <b />
+      <b />
+      <b />
+      <span>Б</span>
+    </div>
+    <h2>
+      Начните с того,<br />
+      <i>где вы сейчас</i>
+    </h2>
+    <p>Запишитесь на консультацию — онлайн по всему миру или очно в городе Астана.</p>
+    
+    <div className="contact-actions-group" style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap', marginTop: '24px' }}>
+      <a className="contact-action" href={whatsappLink("консультация")}>
+        Запись на консультацию <ArrowUpRight size={18} />
+      </a>
+
+      {/* Интерактивная иконка и ссылка на Instagram */}
+      <a 
+        href="https://www.instagram.com/zulyal_ushurova/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="contact-social-link" 
+        aria-label="Instagram"
+      >
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 48 48" 
+          className="social-icon instagram-icon" 
+          width="48" 
+          height="48" 
+          fill="none"
+        >
+          <circle className="social-orbit" cx="24" cy="24" r="21" stroke="currentColor" strokeDasharray="3 4" strokeWidth="1" />
+          <circle className="social-bg" cx="24" cy="24" r="18" fill="transparent" stroke="currentColor" strokeOpacity="0.2" strokeWidth="1" />
+          <g className="social-symbol">
+            <rect x="15" y="15" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.5" fill="none" />
+            <circle cx="24" cy="24" r="4" stroke="currentColor" strokeWidth="1.5" fill="none" />
+            <circle className="social-signal" cx="28.5" cy="19.5" r="1" fill="#a65d4f" />
+          </g>
+        </svg>
+        <span>Instagram</span>
+      </a>
+    </div>
+
+    <div className="contact-orbit orbit-one" />
+    <div className="contact-orbit orbit-two" />
+  </div>
+</section>
       </main>
 
       <footer className="footer"><div className="footer-brand"><a className="wordmark dark" href="#top"><Mark /><span>Зуляль<br /><em>Ушурова</em></span></a><p>Финансовый коуч и консультант<br />Онлайн по всему миру</p></div><div className="footer-nav"><a href="#about">Обо мне</a><a href="#services">Услуги / Тарифы</a><a href="#cases">Кейсы</a><a href="#faq">Частые вопросы</a><a href="#contact">Контакты</a></div><div className="footer-bottom"><span>© 2026 Зуляль Ушурова</span><span>Финансовый коучинг и личные финансы без хаоса</span><a href={whatsappLink("консультация")}>WhatsApp <ArrowUpRight size={13} /></a></div></footer>
