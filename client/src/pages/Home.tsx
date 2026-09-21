@@ -174,7 +174,7 @@ function Home() {
           <div className="section-kicker"><span>01</span><span>Обо мне</span></div>
           <div className="intro-grid">
             <h2>Капитал начинается<br /><i>с ясности</i></h2>
-            <figure className="intro-portrait" style={{ paddingBottom: "9px", paddingLeft: "34px" }}><img src="/media/zulyal-about-portrait-red-gold.webp" alt="Зуляль Ушурова" style={{ paddingLeft: "15px", paddingRight: "5px" }} /><figcaption>Зуляль Ушурова<br /><span>финансовый коуч</span></figcaption></figure>
+            <figure className="intro-portrait"><img src="/media/zulyal-about-portrait-red-gold.webp" alt="Зуляль Ушурова"/><figcaption>Зуляль Ушурова<br /><span>финансовый коуч</span></figcaption></figure>
             <div className="intro-copy"><p>Я обучаю инвестированию и подбору финансовых инструментов для создания капитала и помогаю клиентам выстраивать личную финансовую стратегию. Подбираю финансовые инструменты, подходящие лично Вам.</p><p>Параллельно мы укрепляем опору на себя: повышаем самооценку, убираем блоки и внутреннее сопротивление.</p><p>После работы со мной клиенты часто отмечают рост дохода, уверенность в действиях, спокойствие за будущее и ясность в финансах.</p><a className="text-link" href="#services">Мои услуги <ArrowUpRight size={16} /></a></div>
           </div>
         </section>
