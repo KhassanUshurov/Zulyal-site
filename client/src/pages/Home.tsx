@@ -197,7 +197,7 @@ function Home() {
               <span className="story-tag">03 / ОПОРА</span><h3>Финансовая опора — это спокойствие</h3><p>Финансовая стратегия работает, когда возвращает вам ощущение контроля и свободы выбора.</p><a className="text-link" href="#services">Посмотреть форматы <ArrowUpRight size={16} /></a>
             </article>
             <article className="story-card story-card-consultation">
-              <div className="story-media"><video autoPlay loop muted playsInline preload="metadata" aria-label="Видеоряд для карточки о переходе от вопросов к действиям"><source src="/media/zulyal-actions-story.mp4" type="video/mp4" /></video></div>
+              <div className="story-media"><video autoPlay loop muted playsInline preload="auto" aria-label="Видеоряд для карточки о переходе от вопросов к действиям"><source src="/media/zulyal-actions-story.mp4" type="video/mp4" /></video></div>
               <div className="story-overlay"><Lightbulb size={18} /><span>Вопросы превращаются<br />в действия</span></div>
             </article>
           </div>
