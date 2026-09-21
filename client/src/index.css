@@ -151,15 +151,53 @@
   .section-kicker::after { content: ''; display: block; width: min(118px, 12vw); height: 1px; margin-left: 3px; background: linear-gradient(90deg, #e86647 0 18px, transparent 18px 28px, rgba(232,102,71,.62) 28px 29px, transparent 29px 39px, rgba(232,102,71,.32) 39px 40px, transparent 40px 100%); }
   .section-kicker.light { color: rgba(255,250,241,.65); }
   .intro { background: #f7fbfb; }
-  .intro-grid { display: grid; grid-template-columns: minmax(0, .75fr) minmax(330px, .95fr) minmax(280px, .75fr); gap: clamp(30px, 4.3vw, 68px); margin-top: 72px; align-items: start; }
+
+  /* Исправленная сетка секции Обо мне */
+  .intro-grid { 
+    display: grid; 
+    grid-template-columns: minmax(260px, 0.85fr) minmax(280px, 1fr) minmax(240px, 0.8fr); 
+    gap: clamp(20px, 3vw, 68px); 
+    margin-top: 72px; 
+    align-items: start; 
+  }
   
-  /* Обновленный блок карточки портрета с подписью */
-  .intro-portrait { margin: 0; position: relative; display: flex; flex-direction: column; align-items: flex-start; width: 100%; }
-  .intro-portrait img { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover; object-position: center 16%; filter: saturate(.98) contrast(1.01) brightness(1.03); }
-  .intro-portrait figcaption { margin-top: 14px; color: #332c26; font-family: 'Instrument Serif', serif; font-size: 21px; line-height: 1; text-align: left; }
-  .intro-portrait figcaption span { color: #e86647; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: .12em; text-transform: uppercase; display: block; margin-top: 4px; }
+  .intro-portrait { 
+    margin: 0; 
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    width: 100%; 
+  }
+  .intro-portrait img { 
+    display: block; 
+    width: 100%; 
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3; 
+    object-fit: cover; 
+    object-position: center 16%; 
+    filter: saturate(.98) contrast(1.01) brightness(1.03); 
+  }
+  .intro-portrait figcaption { 
+    margin-top: 14px; 
+    color: #332c26; 
+    font-family: 'Instrument Serif', serif; 
+    font-size: 21px; 
+    line-height: 1; 
+    text-align: left; 
+  }
+  .intro-portrait figcaption span { 
+    color: #e86647; 
+    font-family: 'DM Mono', monospace; 
+    font-size: 8px; 
+    letter-spacing: .12em; 
+    text-transform: uppercase; 
+    display: block; 
+    margin-top: 4px; 
+  }
   
-  h2 { margin: 0; font-size: clamp(53px, 6.7vw, 104px); line-height: .89; }
+  h2 { margin: 0; font-size: clamp(53px, 6.7vw, 104px); line-height: .89; word-break: break-word; }
   .intro-copy { max-width: 520px; padding-top: 13px; }
   .intro-copy p, .requests-heading p, .services-heading p, .cases-heading p, .contact-inner > p { color: #6f665d; font-size: 14px; line-height: 1.85; }
   .intro-copy p { margin: 0 0 18px; }
@@ -316,15 +354,15 @@
   .bottom-menu-brand .brand-mark { width: 28px; height: 28px; }
   .bottom-menu-cta { border-radius: 11px; background: #e86647; color: #fffaf1 !important; padding: 0 10px !important; }
   .bottom-menu-cta:hover { background: #d75338; color: #fffaf1 !important; }
-  @media (max-width: 980px) {
-    .main-nav { gap: 13px; margin-right: 20px; }
-    .main-nav a { font-size: 8px; }
+  
+  @media (max-width: 1180px) {
     .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .plan { min-height: 560px; }
-    .case-card { flex-basis: min(72vw, 430px); }
-    .case-card { min-height: 370px; }
+    .case-card { flex-basis: min(72vw, 430px); min-height: 370px; }
   }
-  @media (max-width: 700px) {
+
+  /* Увеличен медиа-запрос до 1024px, чтобы вовремя перестраивать блоки на планшетах */
+  @media (max-width: 1024px) {
     .hero { min-height: 740px; }
     .hero-image video { object-position: 60% center; }
     .hero-copy { top: 46%; left: 22px; right: 22px; transform: translateY(-42%); }
@@ -336,7 +374,13 @@
     .hero-route { right: 22px; bottom: 76px; }
     .scroll-label { display: none; }
     .section-pad { padding: 86px 22px; }
-    .intro-grid, .requests-heading, .services-heading, .cases-heading, .faq-grid, .story-heading { grid-template-columns: 1fr; gap: 38px; margin-top: 48px; }
+    
+    .intro-grid, .requests-heading, .services-heading, .cases-heading, .faq-grid, .story-heading { 
+      grid-template-columns: 1fr; 
+      gap: 38px; 
+      margin-top: 48px; 
+    }
+    
     .story-heading { margin-bottom: 42px; }
     .story-grid { display: flex; flex-direction: column; gap: 12px; }
     .story-card, .story-card-main, .story-card-note, .story-card-route, .story-card-consultation { display: grid; grid-column: auto; grid-row: auto; }
@@ -374,7 +418,11 @@
     .cases-tools { margin-top: -22px; }
     .cases-scroll-hint { font-size: 8px; }
     .case-card { flex-basis: calc(100vw - 44px); }
+    
+    .intro-grid .intro-portrait { max-width: 410px; transform: none; }
+    .intro-portrait img { aspect-ratio: 2 / 3; object-position: center 16%; }
   }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
   }
@@ -417,10 +465,7 @@
   .contact-orbit { border-color: rgba(var(--accent-red-gold-rgb), .45); }
   .case-grid { scrollbar-color: rgba(var(--accent-red-gold-rgb), .75) rgba(255,250,241,.12); }
   .intro-grid .intro-portrait { transform: translateY(-10px); }
-  @media (max-width: 700px) {
-    .intro-grid .intro-portrait { max-width: 410px; transform: none; }
-    .intro-portrait img { aspect-ratio: 2 / 3; object-position: center 16%; }
-  }
+
   @keyframes cta-breathe-red-gold {
     0%, 100% { box-shadow: 0 12px 22px rgba(var(--accent-red-gold-rgb), .2); }
     50% { box-shadow: 0 16px 31px rgba(var(--accent-red-gold-rgb), .34); }
