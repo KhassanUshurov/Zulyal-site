@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="social-icon instagram-icon" width="48" height="48" fill="none">
+  <!-- Внешняя орбита (вращается при наведении) -->
+  <circle class="social-orbit" cx="24" cy="24" r="21" stroke="currentColor" stroke-dasharray="3 4" stroke-width="1" />
+  
+  <!-- Внутренняя фоновая подложка -->
+  <circle class="social-bg" cx="24" cy="24" r="18" fill="transparent" stroke="currentColor" stroke-opacity="0.2" stroke-width="1" />
+  
+  <!-- Основной контур иконки Instagram -->
+  <g class="social-symbol">
+    <!-- Внешний квадрат с закругленными углами -->
+    <rect x="15" y="15" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5" fill="none" />
+    
+    <!-- Центральный объектив -->
+    <circle cx="24" cy="24" r="4" stroke="currentColor" stroke-width="1.5" fill="none" />
+    
+    <!-- Точка вспышки (Red Gold акцент) -->
+    <circle class="social-signal" cx="28.5" cy="19.5" r="1" fill="#a65d4f" />
+  </g>
+</svg>
