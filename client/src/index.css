@@ -490,7 +490,6 @@
 .contact-social-link {
   display: inline-flex;
   align-items: center;
-  line-height: 1;
   gap: 12px;
   color: #fffaf1;
   text-decoration: none;
@@ -498,11 +497,13 @@
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  transition: color 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translateY(4px); 
+  transition: color 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .contact-social-link:hover {
   color: #a65d4f;
+  transform: translateY(2px);
 }
 
 /* SVG-иконка */
