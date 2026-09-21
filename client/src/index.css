@@ -152,7 +152,7 @@
   .section-kicker.light { color: rgba(255,250,241,.65); }
   .intro { background: #f7fbfb; }
 
-  /* Исправленная сетка секции Обо мне */
+  /* Сетка секции Обо мне */
   .intro-grid { 
     display: grid; 
     grid-template-columns: minmax(260px, 0.85fr) minmax(280px, 1fr) minmax(240px, 0.8fr); 
@@ -361,7 +361,6 @@
     .case-card { flex-basis: min(72vw, 430px); min-height: 370px; }
   }
 
-  /* Увеличен медиа-запрос до 1024px, чтобы вовремя перестраивать блоки на планшетах */
   @media (max-width: 1024px) {
     .hero { min-height: 740px; }
     .hero-image video { object-position: 60% center; }
@@ -474,7 +473,7 @@
 }
 
 /* ==========================================
-   Instagram & Contact Actions
+   Instagram & Contact Actions (Исправлено)
    ========================================== */
 
 /* Группа кнопок в секции контактов */
@@ -497,20 +496,20 @@
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  transform: translateY(4px); 
-  transition: color 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-top: 8px; /* Гарантированный сдвиг всей ссылки с иконкой вниз */
+  transition: color 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .contact-social-link:hover {
   color: #a65d4f;
-  transform: translateY(10px);
 }
 
 /* SVG-иконка */
 .social-icon {
-  display: inline-block;
+  display: block;
   color: #fffaf1;
   overflow: visible;
+  margin-top: 2px; /* Дополнительная точная регулировка положения иконки */
   transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -555,9 +554,4 @@
 .contact-social-link:hover .social-signal {
   transform: scale(1.4);
   fill: #e86647;
-}
-
-.contact-social-link .social-icon {
-  display: block;
-  vertical-align: middle;
 }
