@@ -481,7 +481,7 @@
 .contact-actions-group {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
   margin-top: 28px;
   flex-wrap: wrap;
 }
@@ -490,6 +490,7 @@
 .contact-social-link {
   display: inline-flex;
   align-items: center;
+  line-height: 1;
   gap: 12px;
   color: #fffaf1;
   text-decoration: none;
@@ -553,4 +554,9 @@
 .contact-social-link:hover .social-signal {
   transform: scale(1.4);
   fill: #e86647;
+}
+
+.contact-social-link .social-icon {
+  display: block;
+  vertical-align: middle;
 }
