@@ -503,7 +503,7 @@
 
 .contact-social-link:hover {
   color: #a65d4f;
-  transform: translateY(6px);
+  transform: translateY(10px);
 }
 
 /* SVG-иконка */
