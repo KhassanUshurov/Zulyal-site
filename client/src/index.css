@@ -555,3 +555,25 @@
   transform: scale(1.4);
   fill: #e86647;
 }
+
+/* Номер телефона под кнопкой */
+.contact-phone-block {
+  margin-top: 24px;
+}
+
+.contact-phone-link {
+  display: inline-block;
+  color: #fffaf1;
+  font-family: 'DM Mono', monospace, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-phone-link:hover {
+  opacity: 1;
+  color: #a65d4f;
+  transform: translateX(3px);
+}
