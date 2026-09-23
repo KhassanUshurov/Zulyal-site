@@ -556,13 +556,15 @@
   fill: #e86647;
 }
 
-/* Номер телефона под кнопкой */
+/* Номер телефона со значком под кнопкой */
 .contact-phone-block {
   margin-top: 24px;
 }
 
 .contact-phone-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: #fffaf1;
   font-family: 'DM Mono', monospace, sans-serif;
   font-size: 15px;
@@ -572,8 +574,22 @@
   transition: opacity 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
+/* Иконка телефона */
+.contact-phone-link .phone-icon {
+  width: 18px;
+  height: 18px;
+  color: rgba(255, 250, 241, 0.6);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Эффекты при наведении */
 .contact-phone-link:hover {
   opacity: 1;
   color: #a65d4f;
   transform: translateX(3px);
+}
+
+.contact-phone-link:hover .phone-icon {
+  color: #a65d4f;
+  transform: scale(1.1);
 }
