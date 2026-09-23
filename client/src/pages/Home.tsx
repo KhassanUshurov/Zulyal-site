@@ -280,6 +280,12 @@ function Home() {
       </a>
     </div>
 
+<div className="contact-phone-block">
+          <a href="tel:+77059824091" className="contact-phone-link">
+            +7 705 982 40 91
+          </a>
+        </div>
+    
     <div className="contact-orbit orbit-one" />
     <div className="contact-orbit orbit-two" />
   </div>
