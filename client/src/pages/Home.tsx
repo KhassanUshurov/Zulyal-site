@@ -1,6 +1,7 @@
 /* Style direction: Светлая финансовая редакционность — ясная фотография, ледяной голубой фон, глубокий navy, коралловые route-маркеры and a persistent bottom dock. */
 import { ArrowDownRight, ArrowLeft, ArrowRight, ArrowUpRight, BarChart3, CalendarDays, Check, CheckCircle2, CircleDollarSign, Compass, Lightbulb, MoveRight, PiggyBank, Plus, ShieldCheck, Sparkles, Target, TrendingUp, Wallet } from "lucide-react";
 import { useEffect, useRef } from "react";
+import AutoVideo from "@/components/AutoVideo";
 
 /* Style direction: Светлая финансовая редакционность — ясный крупный портрет, deep navy и приглушённое красное золото вместо яркого оранжевого. */
 const WHATSAPP_BASE = "https://wa.me/77059824091?text=";
@@ -159,7 +160,7 @@ function Home() {
     <div className="site-shell">
       <main id="top">
         <section className="hero">
-          <div className="hero-image"><video autoPlay loop muted playsInline aria-label="Фоновый видеоряд для сайта Зуляль"><source src="/media/zulyal-background-enhanced.mp4" type="video/mp4" /></video><div className="hero-shade" /></div>
+          <div className="hero-image"><AutoVideo src="/media/zulyal-hero-v2.mp4" poster="/media/zulyal-hero-poster.jpg" label="Фоновый видеоряд для сайта Зуляль" /><div className="hero-shade" /></div>
           <div className="hero-copy">
             <p className="eyebrow light">Финансовый коуч · Онлайн по всему миру</p>
             <div className="hero-title-wrap"><span className="hero-index">01 / 05</span><h1>Зуляль<br /><i>Ушурова</i></h1></div>
@@ -197,7 +198,7 @@ function Home() {
               <span className="story-tag">03 / ОПОРА</span><h3>Финансовая опора — это спокойствие</h3><p>Финансовая стратегия работает, когда возвращает вам ощущение контроля и свободы выбора.</p><a className="text-link" href="#services">Посмотреть форматы <ArrowUpRight size={16} /></a>
             </article>
             <article className="story-card story-card-consultation">
-              <div className="story-media"><video autoPlay loop muted playsInline preload="auto" aria-label="Видеоряд для карточки о переходе от вопросов к действиям"><source src="/media/zulyal-actions-story.mp4" type="video/mp4" /></video></div>
+              <div className="story-media"><AutoVideo src="/media/zulyal-actions-v2.mp4" poster="/media/zulyal-actions-poster.jpg" label="Видеоряд для карточки о переходе от вопросов к действиям" /></div>
               <div className="story-overlay"><Lightbulb size={18} /><span>Вопросы превращаются<br />в действия</span></div>
             </article>
           </div>
